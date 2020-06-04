@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    android:foregroundGravity="center"
+    tools:context=".SablonActivity">
+
+    <ImageView
+        android:id="@+id/imagine2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:foregroundGravity="center"
+        android:onClick="add_image2"
+        app:layout_constraintBottom_toBottomOf="@+id/imagine1"
+        app:layout_constraintStart_toEndOf="@+id/imagine1"
+        app:layout_constraintTop_toTopOf="@+id/imagine1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <ImageView
+        android:id="@+id/imagine3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:foregroundGravity="center"
+        android:onClick="add_image3"
+        app:layout_constraintStart_toStartOf="@+id/imagine1"
+        app:layout_constraintTop_toBottomOf="@+id/imagine1"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <ImageView
+        android:id="@+id/imagine1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:cropToPadding="true"
+        android:foregroundGravity="center"
+        android:onClick="add_image1"
+        android:padding="0sp"
+        android:paddingLeft="0sp"
+        android:paddingTop="0sp"
+        android:paddingRight="0sp"
+        android:paddingBottom="0sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <ImageView
+        android:id="@+id/imagine4"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:onClick="add_image4"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imagine3"
+        app:layout_constraintEnd_toEndOf="@+id/imagine2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imagine3"
+        app:layout_constraintTop_toTopOf="@+id/imagine3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:onClick="save_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/collage"
+        app:layout_constraintStart_toStartOf="@+id/collage"
+        app:srcCompat="@drawable/save" />
+
+    <TextView
+        android:id="@+id/collage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/collage"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="46sp"
+        app:fontFamily="cursive"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="@+id/imagine4"
+        app:layout_constraintStart_toStartOf="@+id/imagine3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

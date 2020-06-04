@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
+    tools:context=".EditActivity">
+
+    <ImageView
+        android:id="@+id/contrast"
+        android:layout_width="38dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:onClick="brightness"
+        android:src="@drawable/sun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myphoto" />
+
+    <ImageView
+        android:id="@+id/myphoto"
+        android:layout_width="370dp"
+        android:layout_height="414dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="72dp"
+        android:src="@android:drawable/sym_def_app_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:min="1"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contrast" />
+
+    <ImageView
+        android:id="@+id/constrast"
+        android:layout_width="38dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="modify_contrast"
+        app:layout_constraintBottom_toBottomOf="@+id/contrast"
+        app:layout_constraintStart_toEndOf="@+id/contrast"
+        app:layout_constraintTop_toTopOf="@+id/contrast"
+        app:srcCompat="@drawable/contrast" />
+
+    <ImageView
+        android:id="@+id/black_and_white"
+        android:layout_width="38dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="black_and_white"
+        app:layout_constraintBottom_toBottomOf="@+id/constrast"
+        app:layout_constraintStart_toEndOf="@+id/constrast"
+        app:layout_constraintTop_toTopOf="@+id/constrast"
+        app:srcCompat="@drawable/sensor" />
+
+    <ImageView
+        android:id="@+id/blur"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:onClick="gaussian_filter"
+        app:layout_constraintBottom_toBottomOf="@+id/black_and_white"
+        app:layout_constraintStart_toEndOf="@+id/black_and_white"
+        app:layout_constraintTop_toTopOf="@+id/black_and_white"
+        app:srcCompat="@drawable/cube" />
+
+    <ImageView
+        android:id="@+id/grey"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="grey_filter"
+        app:layout_constraintBottom_toBottomOf="@+id/blur"
+        app:layout_constraintStart_toEndOf="@+id/blur"
+        app:layout_constraintTop_toTopOf="@+id/blur"
+        app:srcCompat="@drawable/gray" />
+
+    <ImageView
+        android:id="@+id/negative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:onClick="negative_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/grey"
+        app:layout_constraintStart_toEndOf="@+id/grey"
+        app:layout_constraintTop_toTopOf="@+id/grey"
+        app:srcCompat="@drawable/negative" />
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="corection"
+        app:layout_constraintBottom_toTopOf="@+id/myphoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/astronomy" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="save_file"
+        app:layout_constraintBottom_toTopOf="@+id/myphoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/save" />
+
+    <ImageView
+        android:id="@+id/sepia"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:onClick="edge_filter"
+        app:layout_constraintBottom_toBottomOf="@+id/negative"
+        app:layout_constraintStart_toEndOf="@+id/negative"
+        app:layout_constraintTop_toTopOf="@+id/negative"
+        app:srcCompat="@drawable/sepia" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

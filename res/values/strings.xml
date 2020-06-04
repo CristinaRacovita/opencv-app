@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Editor Photo</string>
+    <string name="intro">Let\'s edit your photo together!</string>
+    <string name="pick">Choose one of this and let\'s</string>
+    <string name="editing">start editing!</string>
+    <string name="collage">Save Your Collage!</string>
+</resources>
