@@ -1,2 +1,0 @@
-# opencv-app
-EditorPhoto
